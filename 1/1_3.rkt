@@ -3,7 +3,7 @@
 (define (square x) (* x x))
 (define (sum-of-squares x y) (+ (square x) (square y)))
 (define (largest x y z) (begin (when (> y x) (set! x y)) (when (> z x) (set! x z)) x))
-; Are begin, set! and when Racket specific? :fearfuL:
+; Are begin, set! and when Racket specific? :fearful:
 
 (define (totally-descriptive-procedure-name x y z)
     (largest (sum-of-squares x y) (sum-of-squares x z) (sum-of-squares y z)))
