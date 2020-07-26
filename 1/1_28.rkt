@@ -30,7 +30,7 @@
 ; clared probably prime with a probability of at most 1/4^1000.
 (define conf 1000)
 ; The results do not really bear this out though, and non-primes come out true way more often than
-; they should do at higher probabilities of error than 1/4^1000.
+; they should at higher probabilities of error than 1/4^1000.
 
 ; Carmichael numbers: (Would fool the Fermat test)
 (fast-prime? 561 conf) ; #f
