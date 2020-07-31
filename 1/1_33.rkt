@@ -24,7 +24,7 @@
                      0
                      (lambda (k) (* k k))
                      2
-                     (lambda (k) (+ k 1))
+                     inc)
                      10)
 
 ; b)
@@ -35,7 +35,7 @@
 (filtered-accumulate (lambda (k) (= 1 (gcd k n)))
                      *
                      1
-                     (lambda (k) (* k k))
+                     (lambda (k) k)
                      2
-                     (lambda (k) (+ k 1))
+                     inc)
                      10)
