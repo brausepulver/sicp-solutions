@@ -11,14 +11,13 @@
             (iter (next a) (* result (term a)))))
     (iter a 1))
 
-; Otherwise Racket gives an extremely long but accurate fraction. :roll
-(exact->inexact (* 4 
-                (product-iter (lambda (k) 
-                                  (/ (* 2 (floor (/ (+ k 3) 2)))
-                                     (+ 3 (* 2 (floor (/ k 2))))))
-                              0
-                              (lambda (k) (+ k 1))
-                              n)))
+(* 4.0
+   (product-iter (lambda (k) 
+                     (/ (* 2 (floor (/ (+ k 3) 2)))
+                        (+ 3 (* 2 (floor (/ k 2))))))
+                 0
+                 inc)
+                 n))
 
 ; b)
 
@@ -27,10 +26,10 @@
         1
         (* (term a) (product-rec term (next a) next b))))
 
-(exact->inexact (* 4 
-                (product-rec (lambda (k) 
-                                 (/ (* 2 (floor (/ (+ k 3) 2)))
-                                    (+ 3 (* 2 (floor (/ k 2))))))
-                             0
-                             (lambda (k) (+ k 1))
-                             n)))
+(* 4.0
+   (product-rec (lambda (k) 
+                     (/ (* 2 (floor (/ (+ k 3) 2)))
+                        (+ 3 (* 2 (floor (/ k 2))))))
+                 0
+                 inc)
+                 n))
