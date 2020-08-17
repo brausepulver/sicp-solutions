@@ -1,6 +1,6 @@
 #lang sicp
 
-; (#%provide (all-defined)) ; For exercise 2.3
+(#%provide (all-defined)) ; For exercise 2.3
 
 ; Problem: Define a constructor make-segment and selectors start-segment and end-segment that define 
 ; the representation of segments in terms of points. 
@@ -41,6 +41,6 @@
         (start-segment segment)
         (end-segment segment)))
 
-(print-point (midpoint-segment (make-segment (make-point 2 3) 
-                                             (make-point 6 5))))
+; (print-point (midpoint-segment (make-segment (make-point 2 3) 
+;                                              (make-point 6 5))))
 ; (4, 4)
